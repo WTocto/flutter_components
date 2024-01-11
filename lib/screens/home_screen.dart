@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
             title: const Text(
-              'HomeScreen',
+              'Componentes en Flutter',
               style: TextStyle(color: Colors.white),
             ),
             elevation: 0,
