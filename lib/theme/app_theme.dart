@@ -26,6 +26,13 @@ class Apptheme {
         shape: const StadiumBorder(), 
         elevation: 0
       ),
+    ),
+
+    inputDecorationTheme: const InputDecorationTheme(
+      floatingLabelStyle: TextStyle(
+        color: primary
+      )
     )
+
   );
 }
