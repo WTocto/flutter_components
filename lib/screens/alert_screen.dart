@@ -76,11 +76,11 @@ class AlertScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: Colors.indigo,
+            backgroundColor: Colors.indigo,
             shape: const StadiumBorder(),
             elevation: 0
           ), 
-          onPressed: () => !Platform.isAndroid ? displayDialogAndroid(context) : displayDialogIOS(context) ,
+          onPressed: () => Platform.isAndroid ? displayDialogAndroid(context) : displayDialogIOS(context) ,
           child: const Padding(
             padding: EdgeInsets.all(20),
             child: Text('Mostrar Alerta', style: TextStyle(fontSize: 16)),

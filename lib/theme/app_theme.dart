@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Apptheme {
-  static const Color primary = Colors.blue;
+  static const Color primary = Colors.indigo;
 
-  static final ThemeData ligthTheme = ThemeData.dark().copyWith(
+  static final ThemeData ligthTheme = ThemeData.light().copyWith(
     primaryColor: Colors.orange,
 
     //appbartheme
@@ -22,7 +22,7 @@ class Apptheme {
     
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.indigo, 
+        backgroundColor: primary, 
         shape: const StadiumBorder(), 
         elevation: 0
       ),
