@@ -42,6 +42,13 @@ class _ListViewBuiderScreenState extends State<ListViewBuiderScreen> {
       [1,2,3,4,5].map((e) => lastid + e)
     );
     setState(() {});
+    if (scrollController.position.pixels + 100 <= scrollController.position.maxScrollExtent) return; // esta liena es para que desaparesca la carga cuando muevo hacia arriba
+    scrollController.animateTo(
+        scrollController.position.pixels +120,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.fastOutSlowIn
+    );
+
   }
 
 
@@ -74,11 +81,12 @@ class _ListViewBuiderScreenState extends State<ListViewBuiderScreen> {
                 }
               ),
               //este container funciona con el satck widget
-              Positioned( // este srive para cpolocral en cualquoer psocion dentro de un stack
-                bottom: 40,
-                left: size.width * 0.5 - 30, // para ajustar el widget en la mitad de la pantalla ya que la pantala esta a 60
-                child: const _LoadingIcon()
-              )
+              if (isloading)
+                Positioned( // este srive para cpolocral en cualquoer psocion dentro de un stack
+                  bottom: 40,
+                  left: size.width * 0.5 - 30, // para ajustar el widget en la mitad de la pantalla ya que la pantala esta a 60
+                  child: const _LoadingIcon()
+                )
             ],
 
           ),
